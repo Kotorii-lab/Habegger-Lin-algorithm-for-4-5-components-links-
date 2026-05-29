@@ -1,0 +1,393 @@
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[         0,          0]
+NotebookDataLength[     16153,        392]
+NotebookOptionsPosition[     15630,        371]
+NotebookOutlinePosition[     16039,        387]
+CellTagsIndexPosition[     15996,        384]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", 
+   RowBox[{"A", ",", "B", ",", "Co"}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"A", "[", 
+    RowBox[{
+    "y12_", ",", "y13_", ",", "y14_", ",", "y23_", ",", "y24_", ",", "y34_"}],
+     "]"}], ":=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"y23", ",", "y24", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"(*", "x12", "*)"}], 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "y23"}], ",", "0", ",", "y34", ",", "0"}], "}"}], ",", 
+     RowBox[{"(*", "x13", "*)"}], 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "y13"}], ",", 
+       RowBox[{"-", "y14"}], ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"(*", "x21", "*)"}], 
+     RowBox[{"{", 
+      RowBox[{"y13", ",", "0", ",", "0", ",", "y34"}], "}"}], ",", 
+     RowBox[{"(*", "x23", "*)"}], 
+     RowBox[{"{", 
+      RowBox[{"y12", ",", "0", ",", 
+       RowBox[{"-", "y14"}], ",", "0"}], "}"}], ",", 
+     RowBox[{"(*", "x31", "*)"}], 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "y12"}], ",", "0", ",", "0", ",", 
+       RowBox[{"-", "y24"}]}], "}"}], ",", 
+     RowBox[{"(*", "x32", "*)"}], 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "y12", ",", "y13", ",", "0"}], "}"}], ",", 
+     RowBox[{"(*", "x41", "*)"}], 
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{"-", "y12"}], ",", "0", ",", "y23"}], "}"}]}], "    ", 
+    RowBox[{"(*", "x42", "*)"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"B", "[", 
+    RowBox[{"y123_", ",", "y124_", ",", "y134_", ",", "y234_"}], "]"}], ":=", 
+   
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"y234", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{"-", "y234"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "y134"}], ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y134", ",", 
+       RowBox[{"-", "y134"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{"-", "y124"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "y124"}], ",", "y124"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y123", ",", 
+       RowBox[{"-", "y123"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "y123"}], "}"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Co", "[", 
+     RowBox[{
+     "y12_", ",", "y13_", ",", "y14_", ",", "y23_", ",", "y24_", ",", 
+      "y34_"}], "]"}], ":=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "y14"}], ",", "y14"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "y13"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y12", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "y24"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "y23"}], ",", "y23"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y34", ",", "0"}], "}"}]}], "}"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"CreateDialog", "[", 
+  RowBox[{"DynamicModule", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Y1", "=", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "1"}], 
+        "}"}]}], ",", 
+      RowBox[{"Y1p", "=", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "1"}], 
+        "}"}]}], ",", 
+      RowBox[{"Y2", "=", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "1", ",", "0"}], "}"}]}], ",", 
+      RowBox[{"Y2p", "=", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], ",", 
+      RowBox[{"Y3", "=", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0"}], "}"}]}], ",", 
+      RowBox[{"Y3p", "=", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0"}], "}"}]}], ",", 
+      RowBox[{"result", "=", "\"\<\>\""}]}], "}"}], ",", 
+    RowBox[{"Column", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Style", "[", 
+        RowBox[{
+        "\"\<Link-Homotopy Checker for 4-component links\>\"", ",", "16", ",",
+          "Bold"}], "]"}], ",", 
+       RowBox[{"Grid", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"\"\<\>\"", ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{"\"\<Link L\>\"", ",", "Bold"}], "]"}], ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{"\"\<Link L'\>\"", ",", "Bold"}], "]"}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Y1:\>\"", ",", 
+             RowBox[{"InputField", "[", 
+              RowBox[{
+               RowBox[{"Dynamic", "[", "Y1", "]"}], ",", 
+               RowBox[{"FieldSize", "->", "Medium"}]}], "]"}], ",", 
+             RowBox[{"InputField", "[", 
+              RowBox[{
+               RowBox[{"Dynamic", "[", "Y1p", "]"}], ",", 
+               RowBox[{"FieldSize", "->", "Medium"}]}], "]"}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Y2:\>\"", ",", 
+             RowBox[{"InputField", "[", 
+              RowBox[{
+               RowBox[{"Dynamic", "[", "Y2", "]"}], ",", 
+               RowBox[{"FieldSize", "->", "Medium"}]}], "]"}], ",", 
+             RowBox[{"InputField", "[", 
+              RowBox[{
+               RowBox[{"Dynamic", "[", "Y2p", "]"}], ",", 
+               RowBox[{"FieldSize", "->", "Medium"}]}], "]"}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Y3:\>\"", ",", 
+             RowBox[{"InputField", "[", 
+              RowBox[{
+               RowBox[{"Dynamic", "[", "Y3", "]"}], ",", 
+               RowBox[{"FieldSize", "->", "Medium"}]}], "]"}], ",", 
+             RowBox[{"InputField", "[", 
+              RowBox[{
+               RowBox[{"Dynamic", "[", "Y3p", "]"}], ",", 
+               RowBox[{"FieldSize", "->", "Medium"}]}], "]"}]}], "}"}]}], 
+          "}"}], ",", 
+         RowBox[{"Alignment", "->", "Left"}], ",", 
+         RowBox[{"Spacings", "->", 
+          RowBox[{"{", 
+           RowBox[{"2", ",", "1"}], "}"}]}]}], "]"}], ",", 
+       RowBox[{"Button", "[", 
+        RowBox[{"\"\<Run\>\"", ",", 
+         RowBox[{"Module", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Y1loc", "=", "Y1"}], ",", 
+             RowBox[{"Y1ploc", "=", "Y1p"}], ",", 
+             RowBox[{"Y2loc", "=", "Y2"}], ",", 
+             RowBox[{"Y2ploc", "=", "Y2p"}], ",", 
+             RowBox[{"Y3loc", "=", "Y3"}], ",", 
+             RowBox[{"Y3ploc", "=", "Y3p"}], ",", " ", "M", ",", "L", ",", 
+             "F", ",", "xvars", ",", "nvars", ",", "fin1", ",", "fin2", ",", 
+             "basis", ",", "zp", ",", "U", ",", "R", ",", "V"}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"(*", 
+            RowBox[{"Step", " ", "1"}], "*)"}], "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{"Y1loc", "=!=", "Y1ploc"}], ",", 
+              RowBox[{"result", "=", "\"\<Not link-homotopic (step 1)\>\""}], 
+              ",", "\[IndentingNewLine]", 
+              RowBox[{"(*", 
+               RowBox[{"Step", " ", "2"}], "*)"}], "\[IndentingNewLine]", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"M", "=", 
+                 RowBox[{"A", "@@", "Y1loc"}]}], ";", "\[IndentingNewLine]", 
+                RowBox[{"xvars", "=", 
+                 RowBox[{"Array", "[", 
+                  RowBox[{"x", ",", "8"}], "]"}]}], ";", 
+                "\[IndentingNewLine]", 
+                RowBox[{"fin1", "=", 
+                 RowBox[{"FindInstance", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"xvars", ".", "M"}], "==", 
+                    RowBox[{"Y2loc", "-", "Y2ploc"}]}], ",", "xvars", ",", 
+                   "Integers"}], "]"}]}], ";", "\[IndentingNewLine]", 
+                RowBox[{"If", "[", 
+                 RowBox[{
+                  RowBox[{"fin1", "===", 
+                   RowBox[{"{", "}"}]}], ",", 
+                  RowBox[{
+                  "result", "=", "\"\<Not link-homotopic (step 2)\>\""}], ",",
+                   "\[IndentingNewLine]", 
+                  RowBox[{"(*", 
+                   RowBox[{"Step", " ", "3"}], "*)"}], "\[IndentingNewLine]", 
+                  
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"L", "=", 
+                    RowBox[{"B", "@@", "Y2ploc"}]}], ";", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"Do", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Y2ploc", "=", 
+                    RowBox[{"Y2ploc", "+", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"xvars", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}], "*", 
+                    RowBox[{"M", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}]}], "/.", " ", 
+                    RowBox[{"fin1", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}]}], ")"}]}]}], ";", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"Y3ploc", "=", 
+                    RowBox[{"Y3ploc", "+", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"xvars", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}], "*", 
+                    RowBox[{"L", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}]}], "/.", " ", 
+                    RowBox[{"fin1", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}]}], ")"}]}]}], ";", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"L", "=", 
+                    RowBox[{"B", "@@", "Y2ploc"}]}], ";"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", "8"}], "}"}]}], "]"}], ";", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"U", ",", "R", ",", "V"}], "}"}], "=", 
+                    RowBox[{"SmithDecomposition", "[", 
+                    RowBox[{"Transpose", "[", "M", "]"}], "]"}]}], ";", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"zp", "=", 
+                    RowBox[{"Flatten", "@", 
+                    RowBox[{"Position", "[", 
+                    RowBox[{
+                    RowBox[{"Diagonal", "[", "R", "]"}], ",", 
+                    RowBox[{"_", "?", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"#", "!=", "0"}], "&"}], ")"}]}]}], "]"}]}]}], 
+                    ";", "\[IndentingNewLine]", 
+                    RowBox[{"basis", "=", 
+                    RowBox[{"V", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"All", ",", 
+                    RowBox[{"Complement", "[", 
+                    RowBox[{
+                    RowBox[{"Range", "[", 
+                    RowBox[{"Length", "[", 
+                    RowBox[{"V", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "]"}], "]"}], ",", "zp"}],
+                     "]"}]}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+                    RowBox[{"nvars", "=", 
+                    RowBox[{"Array", "[", 
+                    RowBox[{"n", ",", 
+                    RowBox[{
+                    RowBox[{"Length", "[", 
+                    RowBox[{"basis", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "]"}], "+", "6"}]}], 
+                    "]"}]}], ";", "\[IndentingNewLine]", 
+                    RowBox[{"F", "=", 
+                    RowBox[{"Co", "@@", "Y1loc"}]}], ";", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"fin2", "=", 
+                    RowBox[{"FindInstance", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"nvars", ".", 
+                    RowBox[{"Join", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Transpose", "[", "basis", "]"}], ".", "L"}], ",",
+                     "F", ",", "1"}], "]"}]}], "==", 
+                    RowBox[{"Y3loc", "-", "Y3ploc"}]}], ",", "nvars", ",", 
+                    "Integers"}], "]"}]}], ";", "\[IndentingNewLine]", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"fin2", "===", 
+                    RowBox[{"{", "}"}]}], ",", 
+                    RowBox[{
+                    "result", "=", "\"\<Not link-homotopic (step 3)\>\""}], 
+                    ",", 
+                    RowBox[{"result", "=", "\"\<Link-homotopic\>\""}]}], 
+                    "]"}], ";"}], ")"}]}], "]"}], ";"}], ")"}]}], "]"}], 
+            ";"}]}], "]"}]}], "]"}], ",", 
+       RowBox[{"Style", "[", 
+        RowBox[{
+         RowBox[{"Dynamic", "[", "result", "]"}], ",", "14", ",", "Blue"}], 
+        "]"}]}], "}"}], "]"}]}], "]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.986431411517953*^9, 3.986431411520101*^9}, {
+   3.986432457068866*^9, 3.986432472240911*^9}, {3.986432825318272*^9, 
+   3.9864328262801743`*^9}, {3.986432892395011*^9, 3.9864329787699013`*^9}, {
+   3.986433055256243*^9, 3.986433064181411*^9}, {3.9864331560758753`*^9, 
+   3.986433178552702*^9}, {3.986433237981077*^9, 3.986433242966071*^9}, {
+   3.986433399300009*^9, 3.986433425663394*^9}, {3.986437456283746*^9, 
+   3.986437587142046*^9}, 3.986437833130772*^9, {3.986437896523278*^9, 
+   3.986438023736857*^9}, {3.986438055217532*^9, 3.986438063494939*^9}, {
+   3.9864381309683123`*^9, 3.986438136781955*^9}, {3.986438230695358*^9, 
+   3.986438241856802*^9}, {3.986438839409395*^9, 3.9864389095195303`*^9}, {
+   3.986438977677429*^9, 3.986438987016539*^9}, {3.9864393256517477`*^9, 
+   3.986439389521954*^9}, {3.986440326559534*^9, 3.986440372995356*^9}, 
+   3.986440814983731*^9, 3.986441045281124*^9, {3.986441097385393*^9, 
+   3.986441135671998*^9}, 3.98644118062062*^9, {3.986441570149905*^9, 
+   3.986441576381406*^9}, {3.986446791588719*^9, 3.986446791840124*^9}, 
+   3.986446829606813*^9, {3.986446883553407*^9, 3.98644688407231*^9}, {
+   3.986447224193788*^9, 3.986447228044937*^9}, 3.986447309562666*^9, {
+   3.986451147475026*^9, 3.9864511903606987`*^9}, {3.986451250352895*^9, 
+   3.9864512718662786`*^9}, {3.9864513318906307`*^9, 3.986451349927873*^9}, {
+   3.98645152177756*^9, 3.986451561581902*^9}, {3.986451800824213*^9, 
+   3.986451815793593*^9}, {3.98645185279462*^9, 3.986451857681153*^9}, {
+   3.986451924059569*^9, 3.986451931196669*^9}, {3.986854227338106*^9, 
+   3.986854248496871*^9}, {3.986854655088697*^9, 3.986854682014872*^9}, {
+   3.986854768993703*^9, 3.9868547898959837`*^9}, {3.986854831029794*^9, 
+   3.986854856683445*^9}, {3.986854900279155*^9, 3.986854900889962*^9}, {
+   3.986855095172697*^9, 3.986855098220226*^9}, {3.986855843521848*^9, 
+   3.98685585117472*^9}, 3.986856094407226*^9, {3.986935497597191*^9, 
+   3.986935554081225*^9}, {3.986935751949624*^9, 3.986935801691847*^9}, 
+   3.986957479753969*^9, {3.986968938572242*^9, 3.986968941939352*^9}},
+ CellLabel->
+  "In[160]:=",ExpressionUUID->"005b36bd-01d3-4af5-8183-33999d5d21d1"]
+},
+WindowSize->{747, 891},
+WindowMargins->{{106, Automatic}, {Automatic, -124}},
+FrontEndVersion->"14.0 for Mac OS X ARM (64-bit) (2023\:5e7412\:670812\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"b7ecfae5-ba79-4469-bfc2-4227583a2ba0"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[400, 13, 15226, 356, 1427, "Input",ExpressionUUID->"005b36bd-01d3-4af5-8183-33999d5d21d1"]
+}
+]
+*)
+
